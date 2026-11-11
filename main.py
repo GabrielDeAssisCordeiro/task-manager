@@ -1,4 +1,6 @@
-from functions import add_note
+import manage_notes
+
+from manage_notes import add_note
 
 entrada = None
 lista = []
