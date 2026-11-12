@@ -1,9 +1,6 @@
-import manage_notes
-
-from manage_notes import add_note
+from controle_notas import add_note, list_notes
 
 entrada = None
-lista = []
 
 def mostrar_menu():
     print("Escolha uma das opções abaixo para continuar: ")
@@ -14,7 +11,7 @@ def mostrar_menu():
     print("5 - Sair")    
 
 print("Bem vindo ao meu programa Task Manager")
-while entrada != 5:
+while True:
     mostrar_menu()
 
     entrada = input("Digite o número da opção desejada: ")
@@ -26,6 +23,7 @@ while entrada != 5:
             add_note(nome_tarefa)
         case "2":
             print("Você escolheu visualizar todas as tarefas.")
+            list_notes()
 
         
         case "3":
