@@ -21,4 +21,4 @@ def list_notes():
         status = "[x]"
       else:
         status = "[ ]"
-    print(f"{nota['ID']} - {status} {nota['Titulo']}")
+      print(f"{nota['ID']} - {status} {nota['Titulo']}")

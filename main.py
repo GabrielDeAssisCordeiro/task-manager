@@ -21,13 +21,14 @@ while True:
             print("Você escolheu adicionar uma nova tarefa.")
             nome_tarefa = input("Defina o nome da tarefa: ")
             add_note(nome_tarefa)
+
         case "2":
             print("Você escolheu visualizar todas as tarefas.")
             list_notes()
 
-        
         case "3":
             print("Você escolheu marcar uma tarefa como concluída.")
+            
         
         case "4":
             print("Você escolheu remover uma tarefa.")
