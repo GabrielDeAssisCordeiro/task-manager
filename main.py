@@ -1,4 +1,4 @@
-from controle_notas import add_note, list_notes
+from controle_notas import add_note, list_notes, do_note
 
 entrada = None
 
@@ -11,8 +11,8 @@ def mostrar_menu():
     print("5 - Sair")    
 
 print("Bem vindo ao meu programa Task Manager")
+mostrar_menu()
 while True:
-    mostrar_menu()
 
     entrada = input("Digite o número da opção desejada: ")
 
@@ -28,7 +28,11 @@ while True:
 
         case "3":
             print("Você escolheu marcar uma tarefa como concluída.")
-            
+            try:
+                tarefa_concluir = int(input("Digite o id da tarefa:"))
+            except ValueError:
+                print("Digite um número válido")
+            do_note(tarefa_concluir)
         
         case "4":
             print("Você escolheu remover uma tarefa.")

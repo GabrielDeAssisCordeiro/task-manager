@@ -22,3 +22,11 @@ def list_notes():
       else:
         status = "[ ]"
       print(f"{nota['ID']} - {status} {nota['Titulo']}")
+
+def do_note(id_concluir):
+  for nota in lista:
+    if nota["ID"] == id_concluir:
+        nota["Concluido"] = True
+        print(f"Tarefa {nota['Titulo']} concluída")
+        return True
+  return False
